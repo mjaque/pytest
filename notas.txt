@@ -1,0 +1,17 @@
+Executar exemplo:
+	python exemplo/test_somar.py
+
+Executar exercicio_1:
+	python exercicio_1/classificador_sardinhas.py
+
+Executar testes do exercicio_1:
+	source venv/bin/activate
+	python -m pytest exercicio_1 
+
+Executar exercicio_2:
+	source venv/bin/activate
+	python -m exercicio_2.app
+
+Executar testes do exercicio_2:
+	source venv/bin/activate
+	python -m pytest exercicio_2 
