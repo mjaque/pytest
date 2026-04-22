@@ -89,7 +89,8 @@ Vai ter de utilizar a parametrização do pytest.
 
 Temos aquí uma applicaçao muito simples com o patrao de Modelo-Vista-Controlador. Façam testes unitários para todas as classes, mas se quiserem que sejam verdadeiramente unitários, cada teste deve ser independente das outras classes. E, para isso, vão precisar de criar objetos "mock".
 
-´´´py
+app.py
+```py
 from controlador import Controlador
 
 
@@ -98,7 +99,8 @@ if __name__ == "__main__":
 
 ```
 
-´´´py
+controlador.py
+```py 
 from vista import Vista
 from modelo import Modelo
 
@@ -119,30 +121,8 @@ class Controlador:
 
 ```
 
-´´´py
-class Modelo:
-    def __init__(self):
-        # Lista onde as pessoas serão guardadas
-        self.pessoas = []
-
-    def guardar(self, pessoa):
-        # Guarda o objeto pessoa na lista
-        self.pessoas.append(pessoa)
-
-```
-
-´´´py
-class Pessoa:
-    def __init__(self, nome, idade):
-        self.nome = nome
-        self.idade = idade
-
-    def __str__(self):
-        return f"Pessoa(nome={self.nome}, idade={self.idade})"
-
-```
-
-´´´py
+vista.py
+```py
 from pessoa import Pessoa
 
 
@@ -158,5 +138,28 @@ class Vista:
 
 ```
 
+pessoa.py
+```py
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
 
+    def __str__(self):
+        return f"Pessoa(nome={self.nome}, idade={self.idade})"
+
+```
+
+modelo.py
+```py 
+class Modelo:
+    def __init__(self):
+        # Lista onde as pessoas serão guardadas
+        self.pessoas = []
+
+    def guardar(self, pessoa):
+        # Guarda o objeto pessoa na lista
+        self.pessoas.append(pessoa)
+
+```
 
