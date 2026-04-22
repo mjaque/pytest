@@ -1,4 +1,4 @@
-# test_app.py
+# test_somar.py
 
 from app import somar
 
